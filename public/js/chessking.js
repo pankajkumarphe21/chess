@@ -93,6 +93,7 @@ const getPieceUnicode=(piece)=>{
 }
 
 socket.on('playerRole',(role)=>{
+    console.log(role)
     playerRole=role;
     renderBoard()
 })
@@ -111,5 +112,3 @@ socket.on('move',(move)=>{
     chess.load(move);
     renderBoard();
 })
-
-renderBoard()
