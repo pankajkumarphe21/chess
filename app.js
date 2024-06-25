@@ -7,12 +7,13 @@ const path=require('path')
 const app=express();
 const server=http.createServer(app);
 
-const io = socket(server, {
+const io=socket(server, {
     cors: {
-      origin: "*",
-      methods: ["GET", "POST"]
-    }
-  });
+      origin: "https://chess-navy-delta.vercel.app/",
+      // or with an array of origins
+      // origin: ["https://my-frontend.com", "https://my-other-frontend.com", "http://localhost:3000"],
+      credentials: true
+    }})
 
 const chess=new Chess();
 let players={};

@@ -1,4 +1,4 @@
-const socket = io('https://chess-navy-delta.vercel.app', {
+const socket = io( {
     transports: ['websocket', 'polling']
 });
 const chess=new Chess();
@@ -112,3 +112,4 @@ socket.on('move',(move)=>{
     chess.load(move);
     renderBoard();
 })
+renderBoard()
