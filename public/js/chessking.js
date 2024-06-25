@@ -1,4 +1,6 @@
-const socket=io()
+const socket = io({
+    transports: ['websocket', 'polling']
+  });
 const chess=new Chess();
 const boardElement=document.querySelector('.chessboard');
 
