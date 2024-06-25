@@ -9,7 +9,7 @@ const server=http.createServer(app);
 
 const io=socket(server, {
     cors: {
-      origin: "https://chess-navy-delta.vercel.app/",
+      origin: "httsp://chess-navy-delta.vercel.app",
       // or with an array of origins
       // origin: ["https://my-frontend.com", "https://my-other-frontend.com", "http://localhost:3000"],
       credentials: true
